@@ -31,7 +31,6 @@ github_username: gourishbiradar
 
 # Build settings
 theme: minima
-markdown: redcarpet
 plugins:
   - jekyll-feed
   - jekyll-theme-hamilton
