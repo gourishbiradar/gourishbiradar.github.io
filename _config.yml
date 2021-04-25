@@ -23,7 +23,6 @@ email: biradar.gourish@gmail.com
 description: Tech blog with weekly mini topics 
 location: Bengaluru, India
 avatar: /avatar.png
-paginate: 5
 baseurl: "/" 
 url: "http://www.gourishbiradar.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
