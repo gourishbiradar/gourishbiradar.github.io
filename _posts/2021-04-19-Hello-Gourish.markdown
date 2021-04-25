@@ -1,7 +1,9 @@
 ---
-layout: post
+layout: archive-taxonomies
+type: tags
 title:  "Hello Gourish"
 date:   2021-04-19 22:00:50 +0530
+toc: true
 categories: Personality 
 ---
 Hello World,
