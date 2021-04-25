@@ -1,5 +1,6 @@
 - title: About
   url: /about/
 - title: Tags
-  url: /tag/
-
+  url: /tags/
+- title: Categories
+  url: /categories/

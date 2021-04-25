@@ -49,7 +49,7 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 <small>{{ post.date | date_to_string }}</small>
 </a>
 {% for tag in post.tags %}
-<a href="/tag/#{{ tag | slugify }}">{{ tag }}</a>
+<a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
 {% endfor %}
 </h3>
 </li>
