@@ -1,0 +1,130 @@
+---
+layout: post 
+title:  "Timing"
+date:   2021-04-25 18:45:50 +0530
+toc: true
+categories: c++ 
+---
+
+We developers have to deal with perfomance of our code on a daily basis.  
+Most of the distributed networks have to worry about the added burden on every new line of code or new API used in their application.
+
+One way we can tackle this problem is by measuring the time taken by our code. 
+Now this trivial task can be very simple to very complicated depending on the application itself.
+
+Timing of functions, classes, blocks of code can be done easily if we can have some sort of an API that 
+* starts a timer on creation
+* ends the timer on end of scope
+* logs it in a meaningful format 
+
+
+## How to time my code ? 
+
+The solution to timing our code can be the use of an object which starts a timer on creation of the object.  
+It should write the time taken to a logfile/standard output based on our requirement.  
+the object will stop the timer when it goes out of scope without explicitly being invoked.  
+These make the object model timer the easiest to implement and use in our code. 
+
+## Implementation (C++)
+
+Let's use a class Timer with the following declaration
+
+{% highlight cpp %}
+class Timer {
+	public:
+		Timer();
+		Timer(std::string message);
+		~Timer();
+	private:
+		std::string message_buffer;
+		std::chrono::time_point<std::chrono::system_clock> m_start_time;
+		std::chrono::time_point<std::chrono::system_clock> m_end_time;
+};
+{% endhighlight %}
+
+the Timer class has two constructors and one destructor.
+we can use the constructor with string argument to output a message to our logger (more in detail below).  
+We can save this in a .h/.hpp file and include in any file where we want to use the Timer.
+
+We can move on the usage of this class in our code before we delve into our implementation of the class
+
+### Using Timer object in our suspect code block
+
+If we are to measure time taken in fetching some file over the network (some form of filesync maybe) we can do so like 
+
+{% highlight cpp %}
+bool foundConfig(DBConnection connection) {
+	ConfigFile file = connection.getConfig();
+	if(file != null)
+	{
+		return true;
+	}
+	return false;
+}
+{% endhighlight %}
+
+We can notice that the API .getconfig seems suspect for time delays, we can measure that block by using Timer like so
+
+{% highlight cpp %}
+bool foundConfig(DBConnection connection) {
+	{
+		Timer time_me("getConfig took: ");
+		ConfigFile file = connection.getConfig();
+	}
+	if(file != null)
+	{
+		return true;
+	}
+	return false;
+}
+{% endhighlight %}
+
+As you can see the {% highlight cpp %} Timer time_me("getConfig took: "); {% endhighlight %} object can declared in a block that encapsulates our suspect code.
+When we exit the block the timer calls the destructor to spit out the time taken along with our message.
+
+### Defining our Timer APIs
+
+I will simply say that you can skip reading this section and try implementing the APIs from above on your own.  
+If you still want to see my simple implementation read ahead.
+
+{% highlight cpp %}
+Timer::Timer()
+{
+	m_start_time = std::chrono::system_clock::now();
+	message_buffer = " Time taken: " ;
+}
+
+Timer::Timer(std::string message)
+{
+	message_buffer = message;
+	m_start_time = std::chrono::system_clock::now();
+}
+
+Timer::~Timer()
+{
+	m_end_time = std::chrono::system_clock::now(); 
+	double delay = std::chrono::duration_cast<std::chrono::milliseconds>(m_end_time - m_start_time).count(); 
+	__LOGGER__(message_buffer) << delay;
+}
+{% endhighlight %}
+
+As you can see it is very straightforward implemntation of the APIs and I am sure we can improve/extend it better over time.
+
+
+If you are wondering what is *__LOGGER__* , well it is simply a MACRO that you can define to handle some io buffer, string buffer, etc. 
+
+Here I have simply taken the standard output to be our logger and hence we can see time taken on our terminal.  
+Here is the code block for the definition 
+{% highlight cpp %}
+#ifndef __LOGGER__
+#define __LOGGER__(x) std::cout << x 
+#endif
+{% endhighlight %}
+
+## What can we do after figuring out time taken? 
+
+Well once we figure out time taken and know that it is not desirable.
+We will have to go down the rabbithole of code optimisation and profiling for code improvement. 
+
+I will cover these topics in future since this blog has already become quite long :^) 
+

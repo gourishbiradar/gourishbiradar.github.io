@@ -4,3 +4,4 @@
 
 layout: home
 ---
+Tech mini blogs every week
