@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: threadspool 
+title: Threadspool 
 email: biradar.gourish@gmail.com
 description: Tech blog with weekly mini topics 
 location: Bengaluru, India

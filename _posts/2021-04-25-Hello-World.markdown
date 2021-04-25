@@ -5,7 +5,7 @@ date:   2021-04-25 18:45:50 +0530
 toc: true
 categories: Personality 
 ---
-# Who will enjoy this blog the most?
+## Who will enjoy this blog the most?
 * Software engineers
 * Tech enthusiasts 
 * Data scientists 
@@ -13,7 +13,7 @@ categories: Personality
 The articles here will be meant to tackle one single problem with a solution that one can read in under 15 minutes. 
 Ideally, I will mention the targetted audience of each article for your ease of reading and add tags for filter by tech stack, language, domain, etc. 
 
-# Who is the author? 
+## Who is the author? 
 Gourish, a software developer and tech enthusiast.   
 I will be mainly writing on the software developement practices and neat quirks of different languages that I use at work or personal projects.
 
