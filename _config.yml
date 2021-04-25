@@ -30,7 +30,7 @@ twitter_username:
 github_username: gourishbiradar 
 
 # Build settings
-theme: hamilton
+theme: minima
 markdown: redcarpet
 plugins:
   - jekyll-feed
