@@ -3,6 +3,7 @@ layout: post
 title:  "Timing"
 date:   2021-04-25 18:45:50 +0530
 toc: true
+tags: [ programming, optimization ]
 categories: c++ 
 ---
 
