@@ -27,6 +27,7 @@ baseurl: "/"
 url: "http://www.gourishbiradar.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: gourishbiradar 
+google_analytics: G-EWDWYYS1E1
 
 # Build settings
 theme: minima
