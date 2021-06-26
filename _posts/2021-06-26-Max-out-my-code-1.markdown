@@ -44,7 +44,7 @@ This function is called in the thread 't' and the very next line makes the 'main
 As you can expect this is pretty useless, you are passing some function to be run and then immediately ask the main thread to wait for the thread to complete it's task. 
 
 Bear with me, as you might notice that the lambda (aka the thing starting with '[]') is printing to standard output. 
-The value being printing is the ID of the thread, this can be obtained from std::this_thread.
+The value being printed is the ID of the thread, this can be obtained from std::this_thread.
 
 now onto more useful uses of threads. 
 
@@ -71,15 +71,15 @@ int main(){
 {% endhighlight %}
 
 As you can notice, this time we are seeing some more keywords we haven't come across before. 
-The std::ref is a function declared under <memory> header, for brevitys' sake let's call it a function that get's you the reference of the input object. 
+The std::ref is a function declared under <memory> header, for brevity's sake let's call it a function that gets you the reference of the input object. 
 
-Why do I have to pass this reference? 
+* Why do I have to pass this reference? 
 
 We know that the thread created has to have access to the objects it is acting on, in this case the vector and the answer 'val' objects.
 
 We have to pass the reference explicitly for this reason. 
 
-Is this useful ? 
+* Is this useful ? 
 
 Yes and No, we put the computation in a separate thread but we can do better, since sum of part of vector is indpendent of rest. 
 We can always run multiple threads to sum up their own parts of the vector and compute sum of all parts at the end. 
@@ -121,26 +121,47 @@ int main(){
 {% endhighlight %}
 
 
-As you can see the code for summation using a new thread is simpler now to follow. 
+As you can see the code for summation using a new thread is now simpler to follow. 
 
 We use a promise object to store the value which has not been computed yet (sum). 
 The actual sum is to be stored in the future object. 
 
 When the thread is created we pass the ownership of the promise using std::move
+
 The thread signals the future object of the value being available now using promise.set_value()
-The main thread get's the actual sum by using future.get(). 
+
+The main thread gets the actual sum by using future.get(). 
 
 This is a simple model and more complex solutions can be built on top of it.
 
 ## Sick of threads - std::async
 
 std::async is the abstraction of threads we deserve. 
-It is an encapsulation of the underlying thread management and the coder has to only pass in the callable with the arguments
-It returns a future object (you can use 'auto' for breavity of code as well) and makes it as close the single threaded looking code as possible
+
+It is an encapsulation of the underlying thread management and the coder has to only pass in the callable with the arguments.
+It returns a future object and makes it as close the single threaded looking code as possible
 
 ### std::launch policies
 
-We have std::launch::async and std::launch::deferred as the two possible options for choosing to run the callable in a separate thread immediately or run it in a separate thread or same thread only when the future value is needed (.get() is called). 
+We have std::launch::async and std::launch::deferred are two options. 
+
+* async 
+
+	We can choose to run the callable in a separate thread immediately. 
+
+	We pass the std::launch::async as the first argument to async. 
+
+
+* deferred 
+
+	We can run it in a separate thread or same thread only when the future value is needed (.get() is called). 
+	
+	We pass the std::launch::deferred as the first argument to async.
+
+* What if I don't care when the work is done? 
+
+	Don't pass any argument, the choice will be made for you by the implementation of async
+
 Let's look at a code snippet to understand it better
 
 ### Code snippet - encapsulate regular functions
@@ -161,6 +182,8 @@ int main(){
 {% endhighlight %}
 
 notice how vectorSum function does not look any special, it is what you and I would write for single threaded functions.
+
+
 The magic of std::async encapsulates the vectorSum function and std::launch::async immediately spawns a thread to execute it. 
 We store the actual sum in a future and look for the value when we are printing it by using .get() just like before. 
 
