@@ -6,6 +6,11 @@ toc: true
 tags: [ cpp, thread, future, promise, async]
 categories: multithreading 
 ---
+This article is an attempt at using cpp for faster programs.
+
+When we talked about synchronous vs asynchronous code in terms of the hardware in the previous post. 
+We did not talk about how to actually make use of asynchronous code in making our programs run faster.
+
 ## Background
 
 Getting the most out of your hardware requires knowing how to schedule tasks appropriately. 
