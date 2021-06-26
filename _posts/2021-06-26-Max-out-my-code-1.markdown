@@ -188,9 +188,15 @@ The magic of std::async encapsulates the vectorSum function and std::launch::asy
 We store the actual sum in a future and look for the value when we are printing it by using .get() just like before. 
 
 ## Conclusion
+
 We can have multiple models to make our code multithreaded and get the most out of the hardware. 
 More modern methods like std::async abstract out the thread management and make it very easy to use.
 
+The code snippets all did some intensive tasks while the main thread continued doing it's work. 
+We have not actually improved the performance of the task itself but the entire program. 
+
 This article has not covered the problem of data races in multithreaded solutions and we will cover it in the future.
+
+In part 2, expect the task to be performed with multithreaded algorithms and interthread communication without maleovalence. 
 
 Happy coding 🤓
