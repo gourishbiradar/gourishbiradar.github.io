@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% assign pinned_posts = site.posts | where: "pinned", true %}
+{% assign normal_posts = site.posts | where_exp: "post", "post.pinned != true" %}
+
+<div class="posts">
+  {% for post in pinned_posts %}
+  <div class="post-preview">
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">📌 {{ post.title }}</a>
+    </h2>
+    <div class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+      {% if post.categories %}
+        &nbsp;·&nbsp;
+        {% for category in post.categories %}
+          <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+  </div>
+  {% endfor %}
+
+  {% for post in normal_posts %}
+  <div class="post-preview">
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <div class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+      {% if post.categories %}
+        &nbsp;·&nbsp;
+        {% for category in post.categories %}
+          <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+  </div>
+  {% endfor %}
+</div>
