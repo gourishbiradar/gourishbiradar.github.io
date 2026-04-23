@@ -4,6 +4,7 @@ title: "Hello World"
 date: 2021-04-25
 categories: personality
 tags: thoughts
+pinned: true
 ---
 
 ## Who will enjoy this blog the most?
