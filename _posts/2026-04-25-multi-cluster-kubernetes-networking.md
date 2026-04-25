@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Multi-Cluster Kubernetes is Hard — and How We Solved It"
-date: 2025-04-10
+date: 2026-04-25
 categories: kubernetes
 tags: kubernetes multi-cluster networking cncf kubeslice
 ---
