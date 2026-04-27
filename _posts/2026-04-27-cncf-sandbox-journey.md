@@ -3,7 +3,7 @@ layout: post
 title: "What Nobody Tells You About Taking a Project to CNCF Sandbox"
 date: 2026-04-27
 categories: [open-source]
-tags:, [cncf, open-source, kubernetes, community, lfx]
+tags: [cncf, open-source, kubernetes, community, lfx]
 ---
 
 In late 2022, we open-sourced KubeSlice and applied to the CNCF Sandbox. A year later, it was accepted. Here's what that process actually looks like from the inside — the parts the blog posts don't cover.

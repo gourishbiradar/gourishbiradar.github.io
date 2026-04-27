@@ -3,7 +3,7 @@ layout: post
 title: "Serving LLMs at Scale: What Nobody Tells You About GPU Infrastructure"
 date: 2026-04-26
 categories: [ai-infrastructure]
-tags:, [gpu, kubernetes, llm, inference, mlops, nvidia]
+tags: [gpu, kubernetes, llm, inference, mlops, nvidia]
 ---
 
 Running a large language model locally on your laptop is a weekend project. Running it reliably in production for hundreds of concurrent users is an infrastructure problem that will test every assumption you have about Kubernetes, GPU scheduling, and cost management.

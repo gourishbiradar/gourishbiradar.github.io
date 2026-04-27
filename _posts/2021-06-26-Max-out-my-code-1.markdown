@@ -4,7 +4,7 @@ title:  "Max out my code - Part 1"
 date:   2021-06-26 18:45:50 +0530
 toc: true
 tags: [ cpp, thread, future, promise, async]
-categories: multithreading 
+categories: [multithreading] 
 ---
 This article is an attempt at using cpp multithreading for faster programs.
 

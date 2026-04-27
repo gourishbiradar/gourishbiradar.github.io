@@ -3,7 +3,7 @@ layout: post
 title: "Max out my code - Part 2"
 date: 2026-04-23
 categories: [multithreading]
-tags:, [async, cpp, future, promise, thread, mutex]
+tags: [async, cpp, future, promise, thread, mutex]
 ---
 
 Welcome back! In [Part 1](https://gourishbiradar.com/multithreading/2021/06/26/Max-out-my-code-1.html) we looked at the tools cpp gives us to spawn threads — `std::thread`, `std::future/promise`, and `std::async`. We ran tasks concurrently but never actually made the tasks themselves faster.

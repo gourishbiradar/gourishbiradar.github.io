@@ -3,7 +3,7 @@ layout: post
 title: "Why Multi-Cluster Kubernetes is Hard — and How We Solved It"
 date: 2026-04-25
 categories: [kubernetes]
-tags:, [kubernetes, multi-cluster, networking, cncf, kubeslice]
+tags: [kubernetes, multi-cluster, networking, cncf, kubeslice]
 ---
 
 For a long time, Kubernetes was sold as the solution to distributed systems complexity. And to be fair — for a single cluster, it largely delivers. But the moment you need to run workloads across multiple clusters, across cloud providers, across regions — the abstraction breaks down completely.

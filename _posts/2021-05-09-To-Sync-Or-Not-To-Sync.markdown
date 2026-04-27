@@ -4,7 +4,7 @@ title:  "To Sync Or Not To Sync"
 date:   2021-05-09 18:45:50 +0530
 toc: true
 tags: [ programming, TOC, asynchronous, Computer Architecture ]
-categories: architecture 
+categories: [architecture] 
 ---
 
 Lately I have been working on code that deals with plenty of multithreaded solutions.
