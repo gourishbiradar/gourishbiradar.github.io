@@ -30,10 +30,8 @@ github_username: gourishbiradar
 google_analytics: G-EWDWYYS1E1
 
 # Build settings
-# theme: minima
 plugins:
   - jekyll-feed
-#  - jekyll-theme-hamilton
   - jekyll-remote-theme
 
 remote_theme: ngzhio/jekyll-theme-hamilton
