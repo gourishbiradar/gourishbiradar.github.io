@@ -1,0 +1,19 @@
+<section class="section" id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <ul class="timeline">
+      {% for job in site.data.experience %}
+      <li class="timeline-item">
+        <div class="timeline-role">{{ job.role }}</div>
+        <div class="timeline-company">{{ job.company }} · {{ job.location }}</div>
+        <div class="timeline-dates">{{ job.start }} – {{ job.end }}</div>
+        <ul class="timeline-bullets">
+          {% for bullet in job.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
