@@ -1,0 +1,20 @@
+<section class="section" id="opensource">
+  <div class="container">
+    <h2 class="section-title">Open Source</h2>
+    {% for project in site.data.opensource %}
+    <div class="opensource-block">
+      <div class="opensource-header">
+        <h3 class="opensource-title">{{ project.name }}</h3>
+        <span class="badge">{{ project.org }}</span>
+        <span class="badge">{{ project.status }}</span>
+      </div>
+      <p class="project-desc">{{ project.description }}</p>
+      <p class="opensource-callout">{{ project.callout }}</p>
+      <div class="opensource-links">
+        <a href="{{ project.repo_url }}" target="_blank" rel="noopener">↗ {{ project.repo_url | remove: "https://" }}</a>
+        <a href="{{ project.work_github_url }}" target="_blank" rel="noopener">↗ Commits on GitHub</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
