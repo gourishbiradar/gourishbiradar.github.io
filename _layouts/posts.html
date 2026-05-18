@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="post-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+<div class="container posts-body">
+  <ul class="posts-list">
+    {% for post in paginator.posts %}
+    <li class="posts-item">
+      <h2 class="posts-item-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <div class="posts-item-meta">
+        <time class="posts-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        {% for category in post.categories %}
+        <span class="tag">{{ category }}</span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination" aria-label="Post navigation">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">← Newer</a>
+    {% else %}
+      <span>← Newer</span>
+    {% endif %}
+
+    {% for i in (1..paginator.total_pages) %}
+      {% if i == paginator.page %}
+        <span class="current">{{ i }}</span>
+      {% elsif i == 1 %}
+        <a href="{{ '/posts/' | relative_url }}">{{ i }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', i }}">{{ i }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Older →</a>
+    {% else %}
+      <span>Older →</span>
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>
