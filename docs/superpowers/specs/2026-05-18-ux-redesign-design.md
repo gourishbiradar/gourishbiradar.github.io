@@ -136,15 +136,15 @@ Each tile: icon (inline SVG), title, 1-sentence description.
 - Tech stack tags
 
 Projects (from resume):
-1. **KubeSlice** — Multi-cluster Kubernetes networking platform. Tags: `Go`, `Kubernetes`, `NSM`, `CNI`, `Operators`, `AES-256-GCM`
-2. **EGS (Elastic GPU Service)** — SaaS for intelligent GPU allocation to LLM workloads. Tags: `Go`, `Kubernetes`, `NVIDIA`, `AMD`, `gRPC`
+1. **EGS (Elastic GPU Service)** — SaaS for intelligent GPU allocation to LLM workloads. Tags: `Go`, `Kubernetes`, `NVIDIA`, `AMD`, `gRPC`
+2. **KubeSlice** — Multi-cluster Kubernetes networking platform. Tags: `Go`, `Kubernetes`, `NSM`, `CNI`, `Operators`, `AES-256-GCM`
 3. **Smart Scaler** — Predictive autoscaling with 20–70% cloud cost reduction. Tags: `Go`, `Kubernetes`, `AWS`, `GCP`, `Azure`
 4. **Smart Traffic Director** — DNS-based traffic steering Kubernetes operator. Tags: `Go`, `Kubernetes Operators`, `Multi-cloud`, `DNS`
 
 ### 5. Open Source (`#opensource`)
 Single highlighted block:
 - KubeSlice — CNCF Sandbox Project
-- GitHub link: `github.com/kubeslice`
+- GitHub link: `github.com/kubeslice` (project repo) + `github.com/gourishkb` (work GitHub with commits)
 - Callout: LFX Mentor, external contributor adoption
 
 ### 6. Experience (`#experience`)
@@ -166,7 +166,7 @@ Each entry shows role, company, date range, and 2 condensed bullet points.
 
 ### 8. Footer
 - Email: `biradar.gourish@gmail.com`
-- GitHub: `github.com/gourishbiradar`
+- GitHub: `github.com/gourishbiradar` (personal, canonical identity link)
 - LinkedIn: `linkedin.com/in/gourishkbiradar`
 - `© Gourish Biradar`
 
@@ -179,6 +179,7 @@ Each entry shows role, company, date range, and 2 condensed bullet points.
 - Displays all posts: title, date, category tags
 - No excerpt on the listing — scannable like a table of contents
 - Category pills use same tag style as portfolio cards
+- Pagination: 5 posts per page, `jekyll-paginate` plugin, prev/next controls at bottom
 
 ### Individual Post Pages
 - Uses `post` layout (extends `default`)
@@ -197,5 +198,4 @@ All existing `_posts/` front matter (`layout`, `title`, `date`, `categories`, `t
 
 - Contact form (no backend requirement)
 - Search functionality
-- Pagination (post count is low)
 - Comments system
