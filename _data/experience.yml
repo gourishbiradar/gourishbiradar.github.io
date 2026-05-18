@@ -40,5 +40,5 @@
   start: "Jun 2017"
   end: "Jul 2017"
   bullets:
-    - "Built PoC for high-throughput sensor data transmission via MQTT (C++14), achieving 20x improvement in rates."
+    - "Built PoC for high-throughput sensor data transmission via MQTT (C++14), achieving 20× improvement in rates."
     - "Implemented cross-platform MQTT clients using Apache Thrift with two teammates."
