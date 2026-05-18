@@ -31,7 +31,8 @@
 
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', function () {
-      navLinks.classList.toggle('open');
+      var open = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
     });
     navLinks.addEventListener('click', function (e) {
       if (e.target.closest('a')) navLinks.classList.remove('open');

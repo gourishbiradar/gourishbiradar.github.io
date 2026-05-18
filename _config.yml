@@ -17,6 +17,10 @@ plugins:
   - jekyll-paginate
 
 exclude:
-  - docs/
+  - _docs/
   - Gemfile
   - Gemfile.lock
+  - CLAUDE.md
+  - README.md
+  - Gourish_Biradar_Resume.pdf
+  - .bundle/

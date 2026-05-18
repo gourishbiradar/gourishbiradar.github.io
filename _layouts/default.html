@@ -11,6 +11,7 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}">
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/avatar.png' | absolute_url }}">
   <meta property="og:type" content="website">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +19,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% feed_meta %}
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
 </head>
 <body>
   {% include nav.html %}
