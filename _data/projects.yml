@@ -1,0 +1,36 @@
+- id: egs
+  title: "EGS (Elastic GPU Service)"
+  description: "SaaS platform for intelligent GPU allocation to LLM workloads, provisioning inference endpoints on dynamically procured GPU nodes."
+  bullets:
+    - "Real-time GPU utilisation monitoring for NVIDIA and AMD GPUs"
+    - "Dynamic node provisioning for inference endpoints at scale"
+    - "Workload-aware GPU scheduling reducing idle resource waste"
+  tags: ["Go", "Kubernetes", "NVIDIA", "AMD", "gRPC"]
+
+- id: kubeslice
+  title: "KubeSlice"
+  badge: "CNCF Sandbox"
+  description: "Multi-cluster Kubernetes networking platform with NSM-based overlay networking and custom CNI integration."
+  bullets:
+    - "Architected certificate-based mutual auth using AES-256-GCM"
+    - "Led full open-sourcing process to CNCF Sandbox"
+    - "Custom CNI integration and Kubernetes Operators (CRDs + controllers)"
+  tags: ["Go", "Kubernetes", "NSM", "CNI", "Operators", "AES-256-GCM"]
+
+- id: smart-scaler
+  title: "Smart Scaler"
+  description: "Predictive autoscaling platform delivering 20–70% cloud cost reduction across multi-cloud customer deployments."
+  bullets:
+    - "Workload-aware scaling algorithms for heterogeneous workloads"
+    - "20–70% cloud cost reduction across production deployments"
+    - "Multi-cloud support: AWS, GCP, and Azure"
+  tags: ["Go", "Kubernetes", "AWS", "GCP", "Azure"]
+
+- id: smart-traffic-director
+  title: "Smart Traffic Director"
+  description: "Custom Kubernetes operator for DNS-based traffic steering across heterogeneous multi-cloud environments."
+  bullets:
+    - "DNS-based traffic steering for low-latency routing"
+    - "High availability across heterogeneous multi-cloud environments"
+    - "Implemented as a custom Kubernetes Operator"
+  tags: ["Go", "Kubernetes Operators", "Multi-cloud", "DNS"]
