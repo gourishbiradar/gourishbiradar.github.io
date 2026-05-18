@@ -1,0 +1,26 @@
+<section class="section" id="work">
+  <div class="container">
+    <h2 class="section-title">Featured Work</h2>
+    {% for project in site.data.projects %}
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">{{ project.title }}</h3>
+        {% if project.badge %}
+        <span class="badge">{{ project.badge }}</span>
+        {% endif %}
+      </div>
+      <p class="project-desc">{{ project.description }}</p>
+      <ul class="project-bullets">
+        {% for bullet in project.bullets %}
+        <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+      <div class="tags">
+        {% for tag in project.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
