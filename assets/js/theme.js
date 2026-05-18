@@ -33,5 +33,8 @@
     hamburger.addEventListener('click', function () {
       navLinks.classList.toggle('open');
     });
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.closest('a')) navLinks.classList.remove('open');
+    });
   }
 }());
