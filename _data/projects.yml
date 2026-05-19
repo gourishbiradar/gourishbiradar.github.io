@@ -1,36 +1,47 @@
 - id: egs
-  title: "EGS (Elastic GPU Service)"
-  description: "SaaS platform for intelligent GPU allocation to LLM workloads, provisioning inference endpoints on dynamically procured GPU nodes."
+  title: "Elastic GPU Service"
+  badge: "LLM INFRASTRUCTURE"
+  description: "Dynamic GPU allocation platform designed for LLM workloads. Supports NVIDIA & AMD, tracks real-time utilization, and makes GPU infrastructure as elastic as compute."
+  impact: "Made GPU Infrastructure Elastic And Observable For LLM Workloads"
   bullets:
-    - "Real-time GPU utilisation monitoring for NVIDIA and AMD GPUs"
-    - "Dynamic node provisioning for inference endpoints at scale"
-    - "Workload-aware GPU scheduling reducing idle resource waste"
-  tags: ["Go", "Kubernetes", "NVIDIA", "AMD", "gRPC"]
+    - "Dynamic GPU allocation per workload demand"
+    - "NVIDIA & AMD GPU support"
+    - "Real-time utilization telemetry"
+    - "Scheduler integration for intelligent placement"
+  tags: ["Kubernetes", "NVIDIA", "AMD", "Go", "Prometheus"]
 
 - id: kubeslice
   title: "KubeSlice"
-  badge: "CNCF Sandbox"
-  description: "Multi-cluster Kubernetes networking platform with NSM-based overlay networking and custom CNI integration."
+  badge: "CNCF SANDBOX"
+  description: "Multi-cluster Kubernetes networking platform. Turns complex distributed infra into a composable, secure overlay network — now an open-source ecosystem under CNCF."
+  impact: "Turned Complex Infra Into A Thriving Open-Source Ecosystem"
   bullets:
-    - "Architected certificate-based mutual auth using AES-256-GCM"
-    - "Led full open-sourcing process to CNCF Sandbox"
-    - "Custom CNI integration and Kubernetes Operators (CRDs + controllers)"
-  tags: ["Go", "Kubernetes", "NSM", "CNI", "Operators", "AES-256-GCM"]
+    - "NSM-based overlay networking across clusters"
+    - "Mutual authentication and end-to-end security"
+    - "Led the open-sourcing and CNCF Sandbox submission"
+    - "Built for enterprise multi-tenancy at scale"
+  tags: ["Kubernetes", "NSM", "Go", "CNCF", "eBPF"]
 
 - id: smart-scaler
   title: "Smart Scaler"
-  description: "Predictive autoscaling platform delivering 20–70% cloud cost reduction across multi-cloud customer deployments."
+  badge: "COST ENGINEERING"
+  description: "Predictive autoscaling platform for multi-cloud deployments. Reduced cloud spend by 20–70% without sacrificing performance or availability."
+  impact: "20–70% Cloud Cost Reduction Across Production Deployments"
   bullets:
-    - "Workload-aware scaling algorithms for heterogeneous workloads"
-    - "20–70% cloud cost reduction across production deployments"
-    - "Multi-cloud support: AWS, GCP, and Azure"
-  tags: ["Go", "Kubernetes", "AWS", "GCP", "Azure"]
+    - "Predictive scaling ahead of traffic spikes"
+    - "Multi-cloud support across AWS, GCP, Azure"
+    - "Custom metrics and policy engine"
+    - "Zero-downtime scaling events"
+  tags: ["Kubernetes", "Go", "AWS", "GCP", "Azure"]
 
 - id: smart-traffic-director
   title: "Smart Traffic Director"
-  description: "Custom Kubernetes operator for DNS-based traffic steering across heterogeneous multi-cloud environments."
+  badge: "NETWORKING"
+  description: "DNS-based multi-cloud traffic management system. Routes requests intelligently across cloud providers with high availability and minimal latency."
+  impact: "Eliminated Single-Cloud Lock-In With Intelligent Global Traffic Control"
   bullets:
-    - "DNS-based traffic steering for low-latency routing"
-    - "High availability across heterogeneous multi-cloud environments"
-    - "Implemented as a custom Kubernetes Operator"
-  tags: ["Go", "Kubernetes Operators", "Multi-cloud", "DNS"]
+    - "DNS-based routing with health-aware failover"
+    - "Multi-cloud traffic distribution policies"
+    - "Latency-optimized request routing"
+    - "Real-time traffic observability"
+  tags: ["DNS", "Envoy", "Multi-cloud", "Go", "Istio"]

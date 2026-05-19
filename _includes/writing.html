@@ -1,23 +1,19 @@
-<section class="section" id="writing">
+<section class="section section-dark" id="writing">
   <div class="container">
-    <h2 class="section-title">Writing</h2>
+    <span class="section-label">Writing</span>
+    <h2 class="section-title">Thoughts on Systems &amp; Scale</h2>
+    <p class="section-subtitle">Notes from building distributed systems in production.</p>
     <div class="writing-grid">
       {% for post in site.posts limit:3 %}
-      <div class="writing-card">
-        <h3 class="writing-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        <div class="writing-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          {% for category in post.categories %}
-          <span class="tag">{{ category }}</span>
-          {% endfor %}
-        </div>
-        {% assign excerpt = post.excerpt | strip_html | truncatewords: 30 %}
-        {% if excerpt %}
-        <p class="writing-excerpt">{{ excerpt }}</p>
+      {% assign words = post.content | number_of_words %}
+      {% assign read_time = words | divided_by: 200 | plus: 1 %}
+      <a href="{{ post.url | relative_url }}" class="writing-card">
+        {% if post.categories.size > 0 %}
+        <span class="writing-category">{{ post.categories | first | upcase }}</span>
         {% endif %}
-      </div>
+        <p class="writing-title">{{ post.title }}</p>
+        <span class="writing-readtime">{{ read_time }} min read</span>
+      </a>
       {% endfor %}
     </div>
     <a href="{{ '/posts/' | relative_url }}" class="view-all">View all posts →</a>

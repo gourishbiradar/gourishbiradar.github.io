@@ -1,26 +1,36 @@
-<section class="section" id="work">
+<section class="section section-dark" id="work">
   <div class="container">
-    <h2 class="section-title">Featured Work</h2>
-    {% for project in site.data.projects %}
-    <div class="project-card">
-      <div class="project-header">
-        <h3 class="project-title">{{ project.title }}</h3>
-        {% if project.badge %}
-        <span class="badge">{{ project.badge }}</span>
-        {% endif %}
+    <span class="section-label">Featured Work</span>
+    <h2 class="section-title">Things I've Built</h2>
+    <p class="section-subtitle">Production-grade systems, not side projects.</p>
+    <div class="fw-list">
+      {% for project in site.data.projects %}
+      <div class="fw-project">
+        <div class="fw-left">
+          <span class="fw-badge">{{ project.badge }}</span>
+          <h3 class="fw-title">{{ project.title }}</h3>
+          <p class="fw-desc">{{ project.description }}</p>
+        </div>
+        <div class="fw-right">
+          <ul class="fw-bullets">
+            {% for bullet in project.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+          {% if project.impact %}
+          <div class="fw-impact">
+            <p class="fw-impact-label">Impact</p>
+            <p class="fw-impact-text">{{ project.impact }}</p>
+          </div>
+          {% endif %}
+          <div class="tags">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
       </div>
-      <p class="project-desc">{{ project.description }}</p>
-      <ul class="project-bullets">
-        {% for bullet in project.bullets %}
-        <li>{{ bullet }}</li>
-        {% endfor %}
-      </ul>
-      <div class="tags">
-        {% for tag in project.tags %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
