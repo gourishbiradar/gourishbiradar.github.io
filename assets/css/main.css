@@ -303,7 +303,7 @@ nav {
   background: var(--bg);
 }
 [data-theme="dark"] .tile { background: var(--bg-subtle); }
-.section-cool .tile { background: #ffffff; }
+[data-theme="light"] .section-cool .tile { background: #ffffff; }
 
 .tile-icon {
   margin-bottom: 20px;
