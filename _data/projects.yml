@@ -1,0 +1,47 @@
+- id: egs
+  title: "Elastic GPU Service"
+  badge: "LLM INFRASTRUCTURE"
+  description: "Dynamic GPU allocation platform designed for LLM workloads. Supports NVIDIA & AMD, tracks real-time utilization, and makes GPU infrastructure as elastic as compute."
+  impact: "Made GPU Infrastructure Elastic And Observable For LLM Workloads"
+  bullets:
+    - "Dynamic GPU allocation per workload demand"
+    - "NVIDIA & AMD GPU support"
+    - "Real-time utilization telemetry"
+    - "Scheduler integration for intelligent placement"
+  tags: ["Kubernetes", "NVIDIA", "AMD", "Go", "Prometheus"]
+
+- id: kubeslice
+  title: "KubeSlice"
+  badge: "CNCF SANDBOX"
+  description: "Multi-cluster Kubernetes networking platform. Turns complex distributed infra into a composable, secure overlay network — now an open-source ecosystem under CNCF."
+  impact: "Turned Complex Infra Into A Thriving Open-Source Ecosystem"
+  bullets:
+    - "NSM-based overlay networking across clusters"
+    - "Mutual authentication and end-to-end security"
+    - "Led the open-sourcing and CNCF Sandbox submission"
+    - "Built for enterprise multi-tenancy at scale"
+  tags: ["Kubernetes", "NSM", "Go", "CNCF", "eBPF"]
+
+- id: smart-scaler
+  title: "Smart Scaler"
+  badge: "COST ENGINEERING"
+  description: "Predictive autoscaling platform for multi-cloud deployments. Reduced cloud spend by 20–70% without sacrificing performance or availability."
+  impact: "20–70% Cloud Cost Reduction Across Production Deployments"
+  bullets:
+    - "Predictive scaling ahead of traffic spikes"
+    - "Multi-cloud support across AWS, GCP, Azure"
+    - "Custom metrics and policy engine"
+    - "Zero-downtime scaling events"
+  tags: ["Kubernetes", "Go", "AWS", "GCP", "Azure"]
+
+- id: smart-traffic-director
+  title: "Smart Traffic Director"
+  badge: "NETWORKING"
+  description: "DNS-based multi-cloud traffic management system. Routes requests intelligently across cloud providers with high availability and minimal latency."
+  impact: "Eliminated Single-Cloud Lock-In With Intelligent Global Traffic Control"
+  bullets:
+    - "DNS-based routing with health-aware failover"
+    - "Multi-cloud traffic distribution policies"
+    - "Latency-optimized request routing"
+    - "Real-time traffic observability"
+  tags: ["DNS", "Envoy", "Multi-cloud", "Go", "Istio"]

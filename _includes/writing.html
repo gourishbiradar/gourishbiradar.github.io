@@ -1,0 +1,21 @@
+<section class="section section-dark" id="writing">
+  <div class="container">
+    <span class="section-label">Writing</span>
+    <h2 class="section-title">Thoughts on Systems &amp; Scale</h2>
+    <p class="section-subtitle">Notes from building distributed systems in production.</p>
+    <div class="writing-grid">
+      {% for post in site.posts limit:3 %}
+      {% assign words = post.content | number_of_words %}
+      {% assign read_time = words | divided_by: 200 | plus: 1 %}
+      <a href="{{ post.url | relative_url }}" class="writing-card">
+        {% if post.categories.size > 0 %}
+        <span class="writing-category">{{ post.categories | first | upcase }}</span>
+        {% endif %}
+        <p class="writing-title">{{ post.title }}</p>
+        <span class="writing-readtime">{{ read_time }} min read</span>
+      </a>
+      {% endfor %}
+    </div>
+    <a href="{{ '/posts/' | relative_url }}" class="view-all">View all posts →</a>
+  </div>
+</section>

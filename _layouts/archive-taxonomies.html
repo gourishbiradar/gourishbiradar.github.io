@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+<div class="page-content container">
+  {% if page.type == "categories" %}
+    {% assign groups = site.categories | sort %}
+  {% else %}
+    {% assign groups = site.tags | sort %}
+  {% endif %}
+
+  {% for group in groups %}
+  <div class="archive-group">
+    <h2 class="archive-group-title" id="{{ group[0] }}">
+      {{ group[0] }}<span class="archive-count">({{ group[1].size }})</span>
+    </h2>
+    <ul class="posts-list">
+      {% for post in group[1] %}
+      <li class="posts-item">
+        <h3 class="posts-item-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <div class="posts-item-meta">
+          <time class="posts-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

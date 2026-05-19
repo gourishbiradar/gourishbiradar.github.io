@@ -1,0 +1,7 @@
+- name: "KubeSlice"
+  org: "CNCF Sandbox Project"
+  status: "Active"
+  repo_url: "https://github.com/kubeslice"
+  work_github_url: "https://github.com/gourishkb"
+  description: "Led architecture, security design (AES-256-GCM, NSM integration, cert-based mutual auth), and full open-sourcing to CNCF Sandbox."
+  callout: "LFX Mentor — driving external contributor onboarding, community growth, and ecosystem engagement."

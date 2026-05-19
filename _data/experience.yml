@@ -1,0 +1,44 @@
+- role: "Software Engineer 3 (Senior IC)"
+  company: "Avesha Systems"
+  location: "Bangalore, India"
+  start: "Jan 2022"
+  end: "Present"
+  bullets:
+    - "Led architecture and open-sourcing of KubeSlice to CNCF Sandbox; active LFX Mentor driving contributor adoption."
+    - "Built EGS — SaaS platform for intelligent GPU allocation to LLM workloads with real-time GPU utilisation monitoring."
+
+- role: "Software Engineer 2"
+  company: "Citrix R&D"
+  location: "Bangalore, India"
+  start: "Mar 2021"
+  end: "Dec 2021"
+  bullets:
+    - "Designed high-throughput event-processing microservice handling ~1,000,000 events per application under 30 minutes end-to-end."
+    - "Led full application lifecycle for a highly distributed, highly transactional platform."
+
+- role: "Software Engineer"
+  company: "Citrix R&D"
+  location: "Bangalore, India"
+  start: "Jul 2019"
+  end: "Feb 2021"
+  bullets:
+    - "Developed Web Application Firewall features in C/C++ across a 10K+ line production codebase."
+    - "Designed PostgreSQL schema models and wrote unit tests eliminating 200+ failures."
+
+- role: "Software Engineering Intern"
+  company: "Citrix R&D"
+  location: "Bangalore, India"
+  start: "Jan 2019"
+  end: "Jun 2019"
+  bullets:
+    - "Built Python REST API test automation framework covering 1,000+ test cases."
+    - "Contributed production code in 2-week Agile sprints from week one."
+
+- role: "Research Intern"
+  company: "ABB"
+  location: "Bangalore, India"
+  start: "Jun 2017"
+  end: "Jul 2017"
+  bullets:
+    - "Built PoC for high-throughput sensor data transmission via MQTT (C++14), achieving 20× improvement in rates."
+    - "Implemented cross-platform MQTT clients using Apache Thrift with two teammates."

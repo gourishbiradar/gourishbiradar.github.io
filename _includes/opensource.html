@@ -1,0 +1,43 @@
+<section class="section section-cool" id="opensource">
+  <div class="container">
+    <span class="section-label">Community</span>
+    <h2 class="section-title">Open Source</h2>
+    <p class="section-subtitle">Building in public. Contributing to the ecosystem.</p>
+    <div class="os-card">
+      <div class="os-philosophy">
+        <span class="section-label">Philosophy</span>
+        <p class="os-philosophy-heading">I don't just build systems — I contribute to the ecosystem.</p>
+        <p class="os-philosophy-body">The best infrastructure is the kind others can build on. Every contribution to open source is infrastructure for the next system someone needs to build.</p>
+      </div>
+      <div class="os-items">
+        <div>
+          <p class="os-item-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            CNCF Contributor
+          </p>
+          <p class="os-item-desc">Active contributor to Cloud Native Computing Foundation projects. Led KubeSlice through the CNCF Sandbox acceptance process — from internal tool to public ecosystem.</p>
+        </div>
+        <div>
+          <p class="os-item-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            LFX Mentor
+          </p>
+          <p class="os-item-desc">Linux Foundation LFX Mentor — helping the next generation of systems engineers contribute meaningfully to production-grade open source projects.</p>
+        </div>
+        <div>
+          <p class="os-item-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+            KubeSlice — CNCF Sandbox
+          </p>
+          <p class="os-item-desc">Turned an internal multi-cluster networking platform into an accepted CNCF Sandbox project. Open source from architecture through documentation.</p>
+          {% for project in site.data.opensource %}
+          <div class="os-links">
+            <a href="{{ project.repo_url }}" target="_blank" rel="noopener">↗ github.com/kubeslice</a>
+            <a href="{{ project.work_github_url }}" target="_blank" rel="noopener">↗ Commits on GitHub</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
