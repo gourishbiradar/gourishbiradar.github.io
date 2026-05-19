@@ -241,12 +241,12 @@ nav {
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 54px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 24px;
   color: var(--accent);
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .hero .tagline {
@@ -303,7 +303,7 @@ nav {
   background: var(--bg);
 }
 [data-theme="dark"] .tile { background: var(--bg-subtle); }
-.section-cool .tile { background: #ffffff; }
+[data-theme="light"] .section-cool .tile { background: #ffffff; }
 
 .tile-icon {
   margin-bottom: 20px;
