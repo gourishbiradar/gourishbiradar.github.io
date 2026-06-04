@@ -640,7 +640,6 @@ nav {
    ============================================================ */
 .contact {
   padding: var(--section-py) 0;
-  text-align: center;
   border-top: 1px solid var(--border);
 }
 
@@ -657,8 +656,6 @@ nav {
   color: var(--text-muted);
   margin-bottom: 48px;
   max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.6;
 }
 
@@ -690,6 +687,28 @@ nav {
   color: var(--accent);
 }
 [data-theme="dark"] .contact-pill:hover { background: #1e3a8a; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-pills {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.calendly-inline-widget {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 /* ============================================================
    FOOTER
@@ -1008,6 +1027,8 @@ footer {
   .fw-project { grid-template-columns: 1fr; gap: 28px; }
   .os-card { grid-template-columns: 1fr; gap: 32px; }
   .writing-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-pills { flex-direction: row; }
 }
 
 @media (max-width: 640px) {
