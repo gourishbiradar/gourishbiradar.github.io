@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Operators: The Mental Model That Finally Made It Click"
 date: 2026-04-28
 categories: [kubernetes]
-tags: [kubernetes,operators,controllers,golang,crd]
+tags: [kubernetes, operators, controllers, golang, crd, cloud-native]
 ---
 
 I've written Kubernetes Operators for four years. For the first six months, I was cargo-culting patterns from examples without really understanding the machinery underneath. This post is the explanation I wish I'd had at the start.
