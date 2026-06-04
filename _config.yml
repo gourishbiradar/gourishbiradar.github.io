@@ -20,6 +20,7 @@ exclude:
   - _docs/
   - Gemfile
   - Gemfile.lock
+  - Makefile
   - CLAUDE.md
   - README.md
   - Gourish_Biradar_Resume.pdf
