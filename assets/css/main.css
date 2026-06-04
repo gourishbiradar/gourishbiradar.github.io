@@ -710,6 +710,13 @@ nav {
   overflow: hidden;
 }
 
+.contact-relocation {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
