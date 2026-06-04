@@ -4,4 +4,5 @@ _site
 .jekyll-metadata
 vendor
 .superpowers/
-docs/
+.docs/
+._docs/
