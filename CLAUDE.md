@@ -43,8 +43,8 @@ All structured content lives in `_data/`:
 - `projects.yml` — featured work cards (fields: `id`, `title`, `badge`, `description`, `impact`, `bullets[]`, `tags[]`)
 - `experience.yml` — job history (fields: `role`, `company`, `location`, `start`, `end`, `bullets[]`)
 - `opensource.yml` — OSS contributions (fields: `name`, `org`, `status`, `repo_url`, `work_github_url`, `description`, `callout`)
-- `navigation.yml` — top nav links
-- `social.yml` — sidebar social icons
+- `navigation.yml` — (removed, nav is hardcoded in nav.html)
+- `social.yml` — (removed, unused)
 
 To update portfolio content, edit the data files — no layout changes needed.
 

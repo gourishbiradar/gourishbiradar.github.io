@@ -6,8 +6,8 @@ permalink: /now/
 
 ## What I'm Doing Now
 
-- Leading **EGS SaaS** — LLM inferencing, intelligent routing, and GPU orchestration at scale
-- Open to **Senior/Staff Engineering offers with relocation** (Berlin, Amsterdam, Dublin)
+- Building AI infrastructure and platform capabilities at **eBay** as MTS (AI Platform Engineer)
 - Mentoring open source contributors via **Linux Foundation LFX** on KubeSlice
+- Writing about Kubernetes, distributed systems, and AI infra
 
-*Last updated: June 2026 — Bengaluru, India*
+*Last updated: July 2026 — Bengaluru, India*

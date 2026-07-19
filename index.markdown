@@ -4,4 +4,4 @@
 
 layout: home
 ---
-Tech mini blogs every week
+Deep dives on Kubernetes, distributed systems, and AI infrastructure

@@ -4,10 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is a blogsite where each article is meant to be byte sized yet covering the topic in depth.
+I'm a Senior Software Engineer specializing in Kubernetes, distributed systems, and AI infrastructure. I write about what I build — deep dives on cloud-native architecture, GPU infrastructure, and systems programming that I wish I'd found when I was learning.
 
-Since, the topics covered will grow over time, the site will have a tags link to filter articles by tags.
+Each post is meant to be thorough yet readable: enough context to understand the problem, real code and architecture, and honest retrospective on what worked and what didn't.
 
-To see all my work from source visit [Gourish]
-
-[Gourish]: https://github.com/gourishbiradar
+Most of my work is open source. You can find me on [GitHub](https://github.com/gourishbiradar) and [LinkedIn](https://www.linkedin.com/in/gourishkbiradar).
