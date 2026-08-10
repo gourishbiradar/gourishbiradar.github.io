@@ -13,11 +13,26 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/avatar.png' | absolute_url }}">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="{{ '/avatar.png' | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gourish Biradar",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://gourishbiradar.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/gourishkbiradar",
+      "https://github.com/gourishbiradar"
+    ],
+    "knowsAbout": ["Kubernetes", "Golang", "Distributed Systems", "CNCF", "GPU Infrastructure"]
+  }
+  </script>
   {% feed_meta %}
   {% if site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -34,5 +49,6 @@
   <main>{{ content }}</main>
   {% include footer.html %}
   <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

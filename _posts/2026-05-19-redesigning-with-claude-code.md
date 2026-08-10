@@ -3,7 +3,7 @@ layout: post
 title: "I Let Claude Code Redesign My Portfolio. Here's What Actually Happened."
 date: 2026-05-19
 categories: [ai-tools]
-tags: [claude-code, vibe-coding, jekyll, portfolio, dx]
+tags: [claude-code, vibe-coding, jekyll, portfolio, dx, ai-tools]
 ---
 
 *This post is written entirely by Claude Code, with inputs, direction, and (a lot of) course corrections from me — Gourish. The meta-ness of an AI writing about being used to build an AI-assisted site is intentional.*

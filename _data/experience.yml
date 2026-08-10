@@ -1,8 +1,16 @@
+- role: "MTS (Member of Technical Staff) — AI Platform Engineer"
+  company: "eBay"
+  location: "Bangalore, India"
+  start: "Jul 2026"
+  end: "Present"
+  bullets:
+    - "Building AI infrastructure and platform capabilities at eBay."
+
 - role: "Software Engineer 3 (Senior IC)"
   company: "Avesha Systems"
   location: "Bangalore, India"
   start: "Jan 2022"
-  end: "Present"
+  end: "Jun 2026"
   bullets:
     - "Led architecture and open-sourcing of KubeSlice to CNCF Sandbox; active LFX Mentor driving contributor adoption."
     - "Built EGS — SaaS platform for intelligent GPU allocation to LLM workloads with real-time GPU utilisation monitoring."
